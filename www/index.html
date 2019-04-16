@@ -17,7 +17,31 @@
   <script src="js/local.js"></script>
   <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
   <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
-
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    var contador = 1;
+    $("button").click(function(){
+      if(contador == 1){
+        if(contador == 1){
+          $("#map").show(800);
+        }
+         $("img").slideToggle(800);
+         $("#result").text("Ó você aí mano").show(800);
+         contador++;
+      }
+      else if(contador>1){
+        if(contador>1){
+          $("#map").hide(800);
+        }
+        $("img").slideToggle(800);
+         $("#result").text("Ó você aí mano").hide(800);
+         contador--;
+      }
+    });
+  });
+  </script>
 </head>
 <body>
   <div class="paginaStyle" >
@@ -25,25 +49,24 @@
       <div class="row">
         <div class="div-col-xs-12">
           <img src="img/google-maps.png" alt="" id="localiza">
+          <h1> Cadê eu?! </h1>
         </div>
       </div>
     </section>
     <div class="row">
       <div class="div-col-xs-12">
-        <button id="procurarLocal"> ? </button>
+        <button id="procurarLocal"> KD? </button>
       </div>
     </div>
   </div>
   <div class="whiteDisplayStyle">
     <section class="whiteDisplay">
-      
+      <h2 id="result"></h2>
+      <div id="map"></div>
     </section>
   </div>
-
-  <div id="map"></div>
+  
 </body>
-
-
   <script src="components/jquery-3.3.1.min.js"></script>
   <script src="components/animation.js"></script>
 </html>
