@@ -13,21 +13,23 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/style.css">
-    
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/local.js"></script>
+  <script src="js/net.js"></script>
   <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
   <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
   $(document).ready(function(){
     var contador = 1;
-    $("button").click(function(){
+    $("#procurarLocal").click(function(){
       if(contador == 1){
         if(contador == 1){
           $("#map").show(800);
         }
          $("img").slideToggle(800);
+          $("#net").slideToggle(800);
          $("#result").text("Ó você aí mano").show(800);
          contador++;
       }
@@ -56,6 +58,7 @@
     <div class="row">
       <div class="div-col-xs-12">
         <button id="procurarLocal"> KD? </button>
+        <button id="net">Conexão? </button>
       </div>
     </div>
   </div>
